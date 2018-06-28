@@ -4,7 +4,7 @@
 $serv = new swoole_server("127.0.0.1", 9501);
 
 $serv->set([
-    'worker_num' => 6 , // worker进程数 cpu 1-4
+    'worker_num' => 8, // worker进程数 cpu 1-4
     'max_request' => 10000,
 ]);
 //监听连接进入事件
