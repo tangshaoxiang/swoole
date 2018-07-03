@@ -19,6 +19,8 @@ class Ws {
             [
                 'worker_num' => 2,
                 'task_worker_num' => 2,
+                'enable_static_handler' => true,
+                'document_root' => "/home/wwwroot/default/swoole/data",
             ]
         );
         $this->ws->on("open", [$this, 'onOpen']);
