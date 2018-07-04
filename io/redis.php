@@ -12,7 +12,7 @@ $redisClient->connect('127.0.0.1', 6379, function(swoole_redis $redisClient, $re
     var_dump($result);
 
     // 同步 redis (new Redis())->set('key',2);
-    $redisClient->set('singwa_1', time(), function(swoole_redis $redisClient, $result) {
+    $redisClient->set('singwa', time(), function(swoole_redis $redisClient, $result) {
         var_dump($result);
     });
 
@@ -20,10 +20,10 @@ $redisClient->connect('127.0.0.1', 6379, function(swoole_redis $redisClient, $re
         var_dump($result);
         $redisClient->close();
     });*/
-  /*  $redisClient->keys('*gw*', function(swoole_redis $redisClient, $result) {
+    $redisClient->keys('*gw*', function(swoole_redis $redisClient, $result) {
         var_dump($result);
         $redisClient->close();
-    });*/
+    });
 
 });
 
